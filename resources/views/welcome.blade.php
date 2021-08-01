@@ -392,12 +392,26 @@
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased" style="background-color: #0a0302">
 
 
-<div class="text-center"><a href="{{ URL::asset('/telescope/logs') }}" target="_blank">Telescope</a></div>
-<div class="text-center"><a href="{{URL::asset('/logs')}}" target="_blank">Logs</a>
+<div class="text-center bg-white px-6 py-4">
 
+    <div><a href="{{ URL::asset('/telescope/logs') }}" target="_blank">Telescope</a></div>
+    <div class="mt-2"><a style="display: block" href="{{URL::asset('/logs')}}" target="_blank">Logs</a></div>
 </div>
+
+
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+        // Expend all objects / arrays
+        const compacted = document.querySelectorAll('.sf-dump-compact');
+        for (let i = 0; i < compacted.length; i++) {
+            compacted[i].className = 'sf-dump-expanded';
+        }
+
+    });
+
+</script>
 </body>
 </html>
