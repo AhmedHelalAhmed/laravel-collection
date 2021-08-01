@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MethodMergeController;
+use App\Http\Controllers\MethodUnionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +23,4 @@ Route::group(['namespace' => '\Rap2hpoutre\LaravelLogViewer'], function()  {
     Route::get('logs', 'LogViewerController@index');
 });
 Route::get('/merge', MethodMergeController::class);
+Route::get('/union', MethodUnionController::class);
