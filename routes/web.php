@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['namespace' => '\Rap2hpoutre\LaravelLogViewer'], function()  {
+    Route::get('logs', 'LogViewerController@index');
+});
